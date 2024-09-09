@@ -2,7 +2,6 @@
 
 return [
     'enable' => true,
-    'debug' => true,
     // 错误异常配置
     'exception_handler' => [
         // 不需要记录错误日志
@@ -16,6 +15,7 @@ return [
             Tinywan\ExceptionHandler\Exception\ServerErrorHttpException::class,
             taoser\Exception\ValidateException::class,
         ],
+        'debug' => env('DEBUG'),
         // 自定义HTTP状态码
         'status' => [
             'validate' => 400, // 验证器异常
